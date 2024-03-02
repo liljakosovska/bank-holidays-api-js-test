@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-02T21:26:08.515Z",
+    "end": "2024-03-02T21:26:09.630Z",
+    "duration": 1115,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e531a28e-f234-403d-98a6-b5fc83cf6a75",
+      "title": "",
+      "fullFile": "/Users/admin/Desktop/projects/supertest-mocha-chai-javascript-master/test-api/bankHolidaysTest.js",
+      "file": "/test-api/bankHolidaysTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5e1579e7-f89b-43f5-960c-bca486d79518",
+          "title": "GET API tests for bank-holidays",
+          "fullFile": "/Users/admin/Desktop/projects/supertest-mocha-chai-javascript-master/test-api/bankHolidaysTest.js",
+          "file": "/test-api/bankHolidaysTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify that request should be successfully sent",
+              "fullTitle": "GET API tests for bank-holidays verify that request should be successfully sent",
+              "timedOut": false,
+              "duration": 438,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(baseConf.baseUrl)\n    .get('/bank-holidays.json')\n    .redirects(1)\n    .end(function (err, res) {\n        expect(res.statusCode).to.be.equal(200);\n        done();\n    });",
+              "err": {},
+              "uuid": "0a98f901-7f11-404a-9441-aff1adb9c92d",
+              "parentUUID": "5e1579e7-f89b-43f5-960c-bca486d79518",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that response should be not epmty",
+              "fullTitle": "GET API tests for bank-holidays Verify that response should be not epmty",
+              "timedOut": false,
+              "duration": 218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(baseConf.baseUrl)\n    .get('/bank-holidays.json')\n    .redirects(1)\n    .end(function (err, res) {\n        Object.keys(res.body).forEach((devision) => {\n            expect(res.body[devision].events).to.not.be.empty;\n        });\n        done();\n    });",
+              "err": {},
+              "uuid": "6849d34d-2c07-4776-98e4-12879964ed96",
+              "parentUUID": "5e1579e7-f89b-43f5-960c-bca486d79518",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that each devision have first event new year",
+              "fullTitle": "GET API tests for bank-holidays Verify that each devision have first event new year",
+              "timedOut": false,
+              "duration": 224,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(baseConf.baseUrl)\n    .get('/bank-holidays.json')\n    .redirects(1)\n    .end(function (err, res) {\n        for (const node in res.body) {\n            expect(res.body[node].events[0].title).to.equal(\"New Year’s Day\");\n        }\n        done();\n    });",
+              "err": {},
+              "uuid": "0827c6c6-ab64-48aa-8ca6-5ff8a81e6aa3",
+              "parentUUID": "5e1579e7-f89b-43f5-960c-bca486d79518",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that all devisons are present",
+              "fullTitle": "GET API tests for bank-holidays Verify that all devisons are present",
+              "timedOut": false,
+              "duration": 229,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request(baseConf.baseUrl)\n    .get('/bank-holidays.json')\n    .redirects(1)\n    .end(function (err, res) {\n        expect(Object.keys(res.body)).to.include(\"england-and-wales\", \"scotland\", \"northern-ireland\");\n        done();\n    });",
+              "err": {},
+              "uuid": "bac06a7a-0a96-417c-aa17-38e17ef678e0",
+              "parentUUID": "5e1579e7-f89b-43f5-960c-bca486d79518",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0a98f901-7f11-404a-9441-aff1adb9c92d",
+            "6849d34d-2c07-4776-98e4-12879964ed96",
+            "0827c6c6-ab64-48aa-8ca6-5ff8a81e6aa3",
+            "bac06a7a-0a96-417c-aa17-38e17ef678e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1109,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Test case 1: Verify that GET request is successfully sent
+    Steps:     
+        Sent GET requst to /bank-holidays.json endpoint
+    Expected Result: 200 status code should be returned    
+
+Test case 2: Verify that response should be not epmty
+    Steps:     
+        Sent GET requst to /bank-holidays.json endpoint
+    Expected Result: holidays for each devision are present
+
+Test case 3: Verify that each devision have first event new year
+    Steps:     
+        Sent GET requst to /bank-holidays.json endpoint
+    Expected Result: each devision have first event new year  
+
+Test case 4: Verify that all devisons are present
+    Steps:     
+        Sent GET requst to /bank-holidays.json endpoint
+    Expected Result: "england-and-wales", "scotland", "northern-ireland" devisons are present     
