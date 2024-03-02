@@ -18,3 +18,6 @@
 
 ### How to view HTML report
 * Go to Project root directory: `./mochawesome-report/mochawesome.html`
+
+### How to view test cases
+* Go to Project root directory: `./test-cases.txt`
